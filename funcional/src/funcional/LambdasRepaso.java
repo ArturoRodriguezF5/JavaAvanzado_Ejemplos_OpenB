@@ -41,5 +41,12 @@ public class LambdasRepaso {
         });
         System.out.println("El numero mayor es: " + may);
 
+        // Creamos una lambda
+        IntStream inInt2 = Arrays.stream(nums);
+        int suma = inInt2.reduce(0, (x, y) -> {
+            System.out.println("X: " + x + " Y: " + y);
+            return x + y;
+        });
+        System.out.println("La suma es: " + suma);
     }
 }
