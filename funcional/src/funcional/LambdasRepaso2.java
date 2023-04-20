@@ -1,7 +1,6 @@
 package funcional;
 
 import java.util.ArrayList;
-import java.util.Locale;
 import java.util.function.Function;
 
 public class LambdasRepaso2 {
@@ -13,7 +12,7 @@ public class LambdasRepaso2 {
         // Llamamos a la función con uso de Apply
         System.out.println("El valor string del número pasado es: " + toStringg.apply(23));
         // Creamos un ArrayList para hacer uso de lambda
-        ArrayList<String> nombres = new ArrayList<String>();
+        ArrayList<String> nombres = new ArrayList<>();
         nombres.add("Jazmin");
         nombres.add("Carolina");
         nombres.add("Arianna");
