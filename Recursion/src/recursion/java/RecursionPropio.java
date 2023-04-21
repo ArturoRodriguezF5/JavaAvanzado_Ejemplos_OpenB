@@ -29,7 +29,7 @@ public class RecursionPropio {
         headRecursion(n -1 );
         System.out.println(n);
     }
-    // Función recursiva aplicando funcional
+    // Función funcional
     public static int suma(int n) {
         return IntStream.rangeClosed(1, n).reduce(0, (a, b) -> {
             System.out.println("Valor a: " + a + " Valor b: " + b);
