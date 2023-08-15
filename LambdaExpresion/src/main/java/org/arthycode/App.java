@@ -47,5 +47,12 @@ public class App {
         App app = new App();
         app.ordenar();
         app.calcular();
+
+        List<String> lista = new ArrayList<>();
+        lista.add("Sandia");
+        lista.add("Platano");
+        lista.add("Melon");
+
+        lista.stream().map(x -> "La: " + x).forEach(System.out::println);
     }
 }
