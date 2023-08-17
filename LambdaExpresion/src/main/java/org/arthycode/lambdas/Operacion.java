@@ -1,4 +1,4 @@
-package org.arthycode;
+package org.arthycode.lambdas;
 
 public interface Operacion {
 
