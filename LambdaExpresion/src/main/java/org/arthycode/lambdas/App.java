@@ -53,5 +53,7 @@ public class App {
         lista.add("Melon");
 
         lista.stream().map(x -> "La: " + x).forEach(System.out::println);
+
     }
+
 }
