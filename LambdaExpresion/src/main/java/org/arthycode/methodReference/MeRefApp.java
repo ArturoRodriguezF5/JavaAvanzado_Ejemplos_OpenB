@@ -23,7 +23,7 @@ public class MeRefApp {
         System.out.println(Arrays.toString(nombres));
     }
     public void referenciarMetodoInstanciaObjetoParticular() {
-
+        System.out.println("Método referido de instancia de clase");
     }
     public void referenciarConstructor() {
 
@@ -42,7 +42,9 @@ public class MeRefApp {
 
     public static void main(String[] args) {
         MeRefApp app = new MeRefApp();
-        app.operar();
-        app.referenciarMetodoInstanciaObjetoArbitrario();
+        //app.operar();
+        //app.referenciarMetodoInstanciaObjetoArbitrario();
+        Operacion op = app::referenciarMetodoInstanciaObjetoParticular;
+        op.saludar();
     }
 }
