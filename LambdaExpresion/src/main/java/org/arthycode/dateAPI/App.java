@@ -1,9 +1,7 @@
 package org.arthycode.dateAPI;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.Month;
+import java.time.*;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 
 public class App {
@@ -31,9 +29,31 @@ public class App {
             System.out.println(fh1.isBefore(fh2));
         }
     }
+    public void instant(int version) throws InterruptedException {
+        if (version == 7) {
+            long ini = System.currentTimeMillis();
+            Thread.sleep(5000);
+            long fin = System.currentTimeMillis();
+            System.out.println(ini - fin);
+        } else if (version == 8) {
+            Instant ini = Instant.now();
+            Thread.sleep(5000);
+            Instant fin = Instant.now();
+            System.out.println(Duration.between(ini, fin).toMillis());
+        }
+    }
+    public void converter() {
+        String fecha = "05/04/1994";
+        DateTimeFormatter fomateador = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate fechaNac = LocalDate.parse(fecha, fomateador);
+        System.out.println(fechaNac);
+        System.out.println(fomateador.format(fechaNac));
+    }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         App app = new App();
-        app.verificar(8);
+        //app.verificar(8);
+        //app.instant(8);
+        app.converter();
     }
 }
